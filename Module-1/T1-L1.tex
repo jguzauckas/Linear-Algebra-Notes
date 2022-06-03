@@ -1,4 +1,8 @@
 \documentclass{article}
+\usepackage{spalign}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
 
 \title{Module 1 \textendash{} Linear Systems and Span \\
         Topic 1 \textendash{} Systems of Linear Equations \\
@@ -30,8 +34,7 @@ A linear equation has the form
 \[a_{1}x_{1} + a_{2}x_{2} + \cdots + a_{n}x_{n} = b\]
 $a_{1}$, $a_{2}$, $\dots$, $a_{n}$ and $b$ are the \textbf{coefficients}, 
 $x_{1}$, $x_{2}$, $\dots$, and $x_{n}$ are the \textbf{variables}, 
-and $n$ is the \textbf{dimension}, or number of variables.
-
+and $n$ is the \textbf{dimension}, or number of variables.\\
 For example:
 
 \begin{itemize}
@@ -40,12 +43,71 @@ For example:
 \end{itemize}
 
 \section{Systems of Linear Equations}
+When we have one or more linear equations, we have a
+\textbf{Linear System} of equations.\\
+For example, a linear system with two equations is
+\spalignsysdelims..
+\[
+  \spalignsys{
+    x_{1} + 1.5x_{2} + \pi x_{3} = 4;
+    5x_{1} \+ \. + 7x_{3} = 5
+  }
+\]
+The set of all possible values of $x_{1}$, $x_{2}$, $\dots$, $x_{n}$
+that satisfy all equations is the \textbf{solution set}. One point
+in the solution set is a \textbf{solution}.
 
 \section{Two Variable Case}
+Consider the following systems. How are they different from each other?
+\[
+\begin{array}{ c c c }
+    \spalignsys{x_{1} - 2x_{2} = -1;-x_{1} + 3x_{2} = 3} &
+    \spalignsys{x_{1} - 2x_{2} = -1;-x_{1} + 2x_{2} = 1} &
+    \spalignsys{x_{1} - 2x_{2} = -1;-x_{1} + 2x_{2} = 3} \\
+    \\
+    \includegraphics[scale=0.17]{Images/1.1.graph1.png} &
+    \includegraphics[scale=0.17]{Images/1.1.graph2.png} &
+    \includegraphics[scale=0.17]{Images/1.1.graph3.png} \\
+    \text{Non-Parallel Lines} &
+    \text{Identical Lines} &
+    \text{Parallel Lines} \\
+    \text{Unique Solution} &
+    \text{Infinite Solutions} &
+    \text{No Solutions} \\
+\end{array}
+\]
 
 \section{Three Variable Case}
+An equation $a_{1}x_{1} + a_{2}x_{2} + a_{3}x_{3} = b$ defines a plane
+in $\mathbb{R}$. The \textbf{solution} to a system of \textbf{three equations}
+is the set of points where all three planes intersect:
+
+\begin{tabular}{ c c c }
+    \\
+    Planes Intersect At a Point &
+    Planes Intersect On a Line &
+    Parallel Planes \\
+    \\
+    \includegraphics[scale=0.25]{Images/1.1.graph4.png} &
+    \includegraphics[scale=0.25]{Images/1.1.graph5.png} &
+    \includegraphics[scale=0.25]{Images/1.1.graph6.png} \\
+    \\
+    Unique Solution &
+    Infinite Solutions &
+    No Solutions \\
+\end{tabular}
 
 \section{Row Reduction by Elementary Row Operations}
+How can we find the solution set to a set of linear equations?
+\\
+We can manipulate equations in a linear system using \textbf{row operations}:
+\begin{enumerate}
+    \item (Replacement/Addition) Add a multiple of one row to another
+    \item (Interchange) Interchange/swap two rows
+    \item (Scaling) Multiple a row by a non-zero scalar
+\end{enumerate}
+Let's use these operations to solve a system of equations:
+
 
 \section{Summary}
 
